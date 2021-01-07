@@ -1,0 +1,12 @@
+spring.cloud.stream:
+  function:
+    definition: coolUsersProcessor
+  bindings:
+    coolUsersProcessor-in-0:
+      destination: user-log
+    coolUsersProcessor-out-0:
+      destination: cool-users
+  kafka:
+    binder:
+      brokers:
+        - localhost:9092
